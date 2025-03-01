@@ -43,3 +43,12 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/codeStyles/Project.xml
+/.idea/.gitignore
+/.idea/active-tab-highlighter-v2.xml
+/.idea/api_linter_proj.xml
+/.idea/aws.xml
+/.idea/gradle.xml
+/.idea/misc.xml
+/.idea/vcs.xml
