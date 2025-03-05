@@ -52,3 +52,5 @@ bin/
 /.idea/gradle.xml
 /.idea/misc.xml
 /.idea/vcs.xml
+
+.qodo
