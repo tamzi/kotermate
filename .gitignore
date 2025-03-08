@@ -54,3 +54,4 @@ bin/
 /.idea/vcs.xml
 
 .qodo
+/.idea/kotlinc.xml
