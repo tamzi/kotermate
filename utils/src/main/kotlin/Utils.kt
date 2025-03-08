@@ -1,4 +1,4 @@
-package org.tamre.utils
+package org.tamzi
 
 import kotlinx.datetime.*
 import kotlinx.serialization.Serializable

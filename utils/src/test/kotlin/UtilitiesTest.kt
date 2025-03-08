@@ -1,4 +1,4 @@
-package org.tamre.utils
+package org.tamzi.utils
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

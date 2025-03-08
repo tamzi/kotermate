@@ -1,7 +1,5 @@
 plugins {
-    kotlin("jvm")
-    // Apply the Application plugin to add support for building an executable JVM application.
-    application
+    kotlin("jvm") version "2.1.0"
 }
 
 group = "org.tamzi"
@@ -10,7 +8,6 @@ version = "1.0-SNAPSHOT"
 
 dependencies {
     testImplementation(kotlin("test"))
-    implementation(project(":utils"))
 }
 
 tasks.test {
