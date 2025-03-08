@@ -3,8 +3,7 @@ package org.tamzi.utils
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.encodeToString
-import org.tamre.utils.*
+import org.tamzi.utils.*
 
 internal class PrinterTest {
 

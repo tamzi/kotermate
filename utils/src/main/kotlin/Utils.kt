@@ -1,8 +1,14 @@
-package org.tamzi
+package org.tamzi.utils
 
 import kotlinx.datetime.*
 import kotlinx.serialization.Serializable
 import kotlinx.coroutines.*
+
+fun main() {
+    Printer("Hello, world!").printMessage()
+    Printer("this is utils!").printMessage()
+}
+
 
 @Serializable
 class Printer(val message: String) {
