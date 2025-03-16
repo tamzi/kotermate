@@ -3,10 +3,27 @@
 # https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
 
 [versions]
+# core
 kotlin = "2.1.10"
+java = "23"
+# Kotlinx and kotlin Ecosystem
 kotlinxDatetime = "0.6.2"
 kotlinxSerializationJSON = "1.8.0"
 kotlinxCoroutines = "1.10.1"
+
+# convention
+spotless = "6.25.0"
+ktlint = "1.2.1"
+build-config = "5.3.5"
+detekt = "1.23.6"
+dependency-health = "1.32.0"
+owasp = "9.1.0"
+kover = "0.7.6"
+jacoco = "0.8.12"
+license-check = "2.7"
+pit-gradle = "1.15.0"
+pit-junit5 = "1.2.1"
+
 
 [libraries]
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -19,4 +36,8 @@ kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", 
 kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutines"]
 
 [plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+java = { id = "java", version.ref = "java" }
 kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+#conventions
