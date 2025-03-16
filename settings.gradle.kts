@@ -1,27 +1,37 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
     includeBuild("buildLogic")
     repositories {
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
-dependencyResolutionManagement {
-    // Use Maven Central as the default repository (where Gradle will download dependencies) in all subprojects.
-    @Suppress("UnstableApiUsage")
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
+        gradlePluginPortal() // This repository hosts the Foojay plugin
         mavenCentral()
     }
 }
 
+// Apply the Foojay plugin directly
 plugins {
-    // Use the Foojay Toolchains plugin to automatically download JDKs required by subprojects.
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.9.0"
 }
 
-
-
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+    versionCatalogs {
+        create("libs") {
+            from(files("gradle/versions.toml"))
+        }
+    }
+}
 
 rootProject.name = "kotermate"
-include("app")
-include(":utils")
+include(
+    ":app",
+    ":utils")
+
+buildCache {
+    local {
+        isEnabled = true
+        directory = File(rootDir, "build-cache")
+    }
+}
