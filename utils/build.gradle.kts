@@ -10,8 +10,8 @@ plugins {
 group = "org.tamzi"
 version = "0.0.2"
 
+// Additional dependencies specific to this module
 dependencies {
-
     implementation(libs.bundles.kotlinxEcosystem)
     testImplementation(kotlin("test"))
 }
