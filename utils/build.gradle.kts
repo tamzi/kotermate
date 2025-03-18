@@ -20,7 +20,7 @@ tasks.test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(23)
+    jvmToolchain(21)
 
     // Configure Kotlin targets properly instead of using the deprecated property
     compilerOptions {

@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.1.10"
+    // Use the kotlin-jvm plugin from the version catalog
+    alias(libs.plugins.kotlin.jvm)
 }
 
 group = "org.tamzi"

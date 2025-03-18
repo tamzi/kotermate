@@ -26,9 +26,11 @@ pit-junit5 = "1.2.1"
 
 
 [libraries]
+# Add Kotlin Gradle plugin reference
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
 kotlinxSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJSON" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJSON" }
 kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 
 # Libraries can be bundled together for easier import
@@ -40,4 +42,10 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 java = { id = "java", version.ref = "java" }
 kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
-#conventions
+# Add convention plugins
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+dependency-health = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependency-health" }
+owasp-dependencies = { id = "org.owasp.dependencycheck", version.ref = "owasp" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+build-config = { id = "com.github.gmazzo.buildconfig", version.ref = "build-config" }
