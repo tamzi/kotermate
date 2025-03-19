@@ -24,6 +24,25 @@ license-check = "2.7"
 pit-gradle = "1.15.0"
 pit-junit5 = "1.2.1"
 
+# testing
+junit-jupiter = "5.10.2"
+mockk = "1.13.10"
+kotest = "5.8.1"
+assertk = "0.28.0"
+turbine = "1.1.0"
+testcontainers = "1.19.7"
+coroutines-test = "1.10.1"
+mockito-kotlin = "5.2.1"
+wiremock = "3.4.2"
+
+# Libraries can be bundled together for easier import
+[bundles]
+kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutines"]
+testing = ["junit-jupiter-api", "junit-jupiter-params", "mockk"]
+kotest = ["kotest-runner-junit5", "kotest-assertions-core", "kotest-property"]
+testcontainers = ["testcontainers-junit-jupiter", "testcontainers-postgresql", "testcontainers-kafka"]
+testing-extended = ["junit-jupiter-api", "junit-jupiter-params", "mockk", "assertk", "kotlinx-coroutines-test", "turbine"]
+
 
 [libraries]
 # Add Kotlin Gradle plugin reference
@@ -33,9 +52,30 @@ kotlinxSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-j
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJSON" }
 kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 
-# Libraries can be bundled together for easier import
-[bundles]
-kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutines"]
+# Testing dependencies
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit-jupiter" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter" }
+junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit-jupiter" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+
+# Additional testing dependencies
+kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
+assertk = { module = "com.willowtreeapps.assertk:assertk", version.ref = "assertk" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines-test" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
+
+# Testcontainers
+testcontainers-junit-jupiter = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }
+testcontainers-postgresql = { module = "org.testcontainers:postgresql", version.ref = "testcontainers" }
+testcontainers-kafka = { module = "org.testcontainers:kafka", version.ref = "testcontainers" }
+
+
+# WireMock for API testing
+wiremock = { module = "org.wiremock:wiremock", version.ref = "wiremock" }
+
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
