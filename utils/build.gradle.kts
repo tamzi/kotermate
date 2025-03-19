@@ -1,9 +1,9 @@
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
-    alias(libs.plugins.kotlin.library)
-    alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.kotlin.test)
+    alias(libs.plugins.kotermate.kotlin.library)
+    alias(libs.plugins.kotermate.kotlin.serialization)
+    alias(libs.plugins.kotermate.kotlin.test)
 }
 
 group = "org.tamzi"

@@ -26,22 +26,22 @@ kotlin {
 gradlePlugin {
     plugins {
         register("kotlinLibrary") {
-            id = libs.plugins.kotlin.library.get().pluginId
+            id = libs.plugins.kotermate.kotlin.library.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinLibraryConventionPlugin"
         }
         
         register("kotlinApplication") {
-            id = libs.plugins.kotlin.application.get().pluginId
+            id = libs.plugins.kotermate.kotlin.application.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinApplicationConventionPlugin"
         }
         
         register("kotlinTest") {
-            id = libs.plugins.kotlin.test.get().pluginId
+            id = libs.plugins.kotermate.kotlin.test.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinTestConventionPlugin"
         }
         
         register("kotlinSerialization") {
-            id = libs.plugins.kotlin.serialization.get().pluginId
+            id = libs.plugins.kotermate.kotlin.serialization.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinSerializationConventionPlugin"
         }
     }
