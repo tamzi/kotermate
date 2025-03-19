@@ -40,5 +40,10 @@ gradlePlugin {
             id = "org.tamzi.convention.kotlin.serialization"
             implementationClass = "org.tamzi.convention.KotlinSerializationConventionPlugin"
         }
+
+        register("kotlinTest") {
+            id = "org.tamzi.convention.kotlin.test"
+            implementationClass = "org.tamzi.convention.KotlinTestConventionPlugin"
+        }
     }
 }
