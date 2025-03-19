@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl` // Enables the Kotlin DSL for writing Gradle plugins
 }
 
-group = "org.tamzi.buildlogic"
+group = "org.tamzi.buildlogic.kotermate"
 
 // Configure repositories for the convention plugin project
 repositories {
@@ -26,22 +26,22 @@ kotlin {
 gradlePlugin {
     plugins {
         register("kotlinLibrary") {
-            id = "org.tamzi.convention.kotlin-library"
+            id = libs.plugins.kotlin.library.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinLibraryConventionPlugin"
         }
         
         register("kotlinApplication") {
-            id = "org.tamzi.convention.kotlin-application"
+            id = libs.plugins.kotlin.application.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinApplicationConventionPlugin"
         }
         
         register("kotlinTest") {
-            id = "org.tamzi.convention.kotlin-test"
+            id = libs.plugins.kotlin.test.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinTestConventionPlugin"
         }
         
         register("kotlinSerialization") {
-            id = "org.tamzi.convention.kotlin-serialization"
+            id = libs.plugins.kotlin.serialization.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinSerializationConventionPlugin"
         }
     }
