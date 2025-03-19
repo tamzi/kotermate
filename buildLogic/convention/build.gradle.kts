@@ -13,7 +13,6 @@ repositories {
 // Dependencies needed for the convention plugins
 dependencies {
     compileOnly(libs.kotlinGradlePlugin)
-    // Add other plugin dependencies that your convention plugins will use
     implementation(libs.kotlinGradlePlugin)
     implementation("org.jetbrains.kotlin:kotlin-serialization:${libs.versions.kotlin.get()}")
 }
@@ -27,23 +26,23 @@ kotlin {
 gradlePlugin {
     plugins {
         register("kotlinLibrary") {
-            id = "org.tamzi.convention.kotlin.library"
+            id = "org.tamzi.convention.kotlin-library"
             implementationClass = "org.tamzi.convention.KotlinLibraryConventionPlugin"
         }
-
+        
         register("kotlinApplication") {
-            id = "org.tamzi.convention.kotlin.application"
+            id = "org.tamzi.convention.kotlin-application"
             implementationClass = "org.tamzi.convention.KotlinApplicationConventionPlugin"
         }
-
-        register("kotlinSerialization") {
-            id = "org.tamzi.convention.kotlin.serialization"
-            implementationClass = "org.tamzi.convention.KotlinSerializationConventionPlugin"
-        }
-
+        
         register("kotlinTest") {
-            id = "org.tamzi.convention.kotlin.test"
+            id = "org.tamzi.convention.kotlin-test"
             implementationClass = "org.tamzi.convention.KotlinTestConventionPlugin"
+        }
+        
+        register("kotlinSerialization") {
+            id = "org.tamzi.convention.kotlin-serialization"
+            implementationClass = "org.tamzi.convention.KotlinSerializationConventionPlugin"
         }
     }
 }
