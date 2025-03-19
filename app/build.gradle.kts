@@ -1,7 +1,8 @@
 plugins {
-    kotlin("jvm")
-    // Apply the Application plugin to add support for building an executable JVM application.
-    application
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotermate.kotlin.application)
+    alias(libs.plugins.kotermate.kotlin.serialization)
+    alias(libs.plugins.kotermate.kotlin.test)
 }
 
 group = "org.tamzi"

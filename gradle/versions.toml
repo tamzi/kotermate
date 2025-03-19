@@ -93,7 +93,7 @@ kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 build-config = { id = "com.github.gmazzo.buildconfig", version.ref = "build-config" }
 
 # Custom convention plugins
-kotlin-library = { id = "org.tamzi.convention.kotlin-library" }
-kotlin-application = { id = "org.tamzi.convention.kotlin-application" }
-kotlin-test = { id = "org.tamzi.convention.kotlin-test" }
-kotlin-serialization = { id = "org.tamzi.convention.kotlin-serialization" }
+kotermate-kotlin-library = { id = "org.tamzi.convention.kotlin-library" }
+kotermate-kotlin-application = { id = "org.tamzi.convention.kotlin-application" }
+kotermate-kotlin-test = { id = "org.tamzi.convention.kotlin-test" }
+kotermate-kotlin-serialization = { id = "org.tamzi.convention.kotlin-serialization" }
