@@ -28,7 +28,7 @@ class KotlinApplicationConventionPlugin : Plugin<Project> {
             
             // Configure Kotlin
             extensions.configure<KotlinJvmProjectExtension> {
-                jvmToolchain(23) // Use Java 23 as specified in your versions.toml
+                jvmToolchain(21)
                 
                 // Configure Kotlin compiler options
                 compilerOptions {

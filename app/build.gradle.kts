@@ -8,6 +8,11 @@ plugins {
 group = "org.tamzi"
 version = "0.0.2"
 
+application {
+    // Define the main class for the application
+    mainClass.set("org.tamzi.AppKt")
+}
+
 
 dependencies {
     testImplementation(kotlin("test"))
