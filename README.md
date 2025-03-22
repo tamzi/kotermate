@@ -1,6 +1,6 @@
 # kotermate
 
-Kotlin terminal template project
+Kotlin terminal multimodule template project
 
 * Run `./gradlew run` to build and run the application.
 * Run `./gradlew build` to only build the application.
@@ -17,5 +17,5 @@ This is the suggested way to use Gradle in production projects.
 This project follows the suggested multi-module setup and consists of the `app` and `utils` subprojects.
 The shared build logic was extracted to a convention plugin located in `buildSrc`.
 
-This project uses a version catalog (see `gradle/libs.versions.toml`) to declare and version dependencies
+This project uses a version catalog (see `gradle/versions.toml`) to declare and version dependencies
 and both a build cache and a configuration cache (see `gradle.properties`).

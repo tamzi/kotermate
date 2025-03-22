@@ -1,6 +1,10 @@
 package org.tamzi
 
 fun main() {
-    val message = "Welcome to kotermate!"
-    println(message)
+    message()
+}
+
+
+fun message() {
+    println("Welcome to kotermate!")
 }
