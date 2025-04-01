@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.kotermate.kotlin.library)
     alias(libs.plugins.kotermate.kotlin.serialization)
     alias(libs.plugins.kotermate.kotlin.test)
+    alias(libs.plugins.kotermate.spotless) apply true
+    alias(libs.plugins.detekt)
 }
 
 group = "org.tamzi"
@@ -12,7 +14,7 @@ version = "0.0.2"
 dependencies {
     // Main dependencies - Kotlin ecosystem libraries
     implementation(libs.bundles.kotlinxEcosystem)
-    
+
     // No need to add test dependencies here - they're added by the convention plugin
 }
 

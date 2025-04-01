@@ -13,12 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.tamzi.kotermate
+import kotlinx.serialization.json.Json
+import kotlin.test.Test
+import kotlin.test.assertEquals
 
-fun main() {
-    message()
-}
+internal class PrinterTest {
+    @Test
+    fun testMessage() {
+        val message = "message"
+        val testPrinter = Printer(message)
+        assertEquals(testPrinter.message, message)
+    }
 
-fun message() {
-    println("Welcome to kotermate!")
+    @Test
+    fun testSerialization() {
+        val message = "message"
+        val json1 = Json.encodeToString(Printer.serializer(), Printer(message))
+        val json2 = Json.encodeToString(Printer.serializer(), Printer(message))
+        assertEquals(json1, json2)
+    }
 }
