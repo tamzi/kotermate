@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.tamzi
+package org.tamzi.convention.kotermate
 
-fun main() {
-    message()
-}
+import org.gradle.api.Project
+import org.gradle.api.artifacts.VersionCatalog
+import org.gradle.api.artifacts.VersionCatalogsExtension
+import org.gradle.kotlin.dsl.getByType
 
-fun message() {
-    println("Welcome to kotermate!")
-}
+val Project.libs
+    get(): VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
