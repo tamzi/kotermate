@@ -9,6 +9,7 @@ Kotlin terminal multimodule template project
 * Run `./gradlew codeQuality` to run all code quality checks.
 * Run `./gradlew fixCodeQuality` to fix all auto-fixable code quality issues.
 * Run `./gradlew :app:spotlessApply` to fix all auto-fixable code quality issues in app module.
+* Run `./gradlew :utils:spotlessApply` to fix all auto-fixable code quality issues in app module.
 * Run `./gradlew :app:codeQuality` to  run code quality checks in app module.
 
 Note the usage of the Gradle Wrapper (`./gradlew`).

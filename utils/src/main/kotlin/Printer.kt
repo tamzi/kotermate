@@ -13,26 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.tamzi.utils
-
-import kotlinx.datetime.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlinx.datetime.Clock
+import kotlinx.datetime.Instant
 import kotlinx.serialization.Serializable
-import kotlinx.coroutines.*
-
-fun main() {
-    Printer("Hello, world!").printMessage()
-    Printer("this is utils!").printMessage()
-}
-
 
 @Serializable
-class Printer(val message: String) {
-    fun printMessage() = runBlocking {
-        val now: Instant = Clock.System.now()
-        launch {
-            delay(1000L)
-            println(now.toString())
-        }
-        println(message)
+class Printer(
+    val message: String
+) {
+    companion object {
+        // Constants to replace magic numbers
+        private const val DELAY_TIME_MS = 1000L
     }
+    fun printMessage() =
+        runBlocking {
+            val now: Instant = Clock.System.now()
+            launch {
+                delay(DELAY_TIME_MS)
+                println(now.toString())
+            }
+            println(message)
+        }
 }

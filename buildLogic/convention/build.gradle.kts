@@ -38,7 +38,7 @@ dependencies {
  * Note: This should match the JVM version used in the convention plugins themselves.
  */
 kotlin {
-    jvmToolchain(23) // Using Java 23 to match the toolchain in the convention plugins
+    jvmToolchain(21) // Using Java 23 to match the toolchain in the convention plugins
 }
 
 /**
