@@ -21,9 +21,15 @@ repositories {
 dependencies {
     // Kotlin Gradle plugin is needed to configure Kotlin projects
     implementation(libs.kotlinGradlePlugin)
-    
+
     // Kotlin serialization plugin for the kotlinSerialization convention
     implementation("org.jetbrains.kotlin:kotlin-serialization:${libs.versions.kotlin.get()}")
+
+    // Spotless plugin dependency
+    implementation("com.diffplug.spotless:spotless-plugin-gradle:7.0.2")
+
+    // Detekt plugin dependency
+    implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.23.8")
 }
 
 /**
@@ -63,6 +69,28 @@ gradlePlugin {
             id = libs.plugins.kotermate.kotlin.serialization.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinSerializationConventionPlugin"
             description = "Configures Kotlin serialization for JSON and other formats"
+        }
+
+
+        register("Spotless") {
+            id =
+                libs.plugins.kotermate.spotless
+                        .get()
+                        .pluginId
+            implementationClass = "org.tamzi.convention.SpotlessConventionPlugin"
+            description = "Configures Spotless for code formatting and style enforcement"
+        }
+
+        register("InstrumentedTests") {
+            id = "org.tamzi.kotermate.instrumented-tests"
+            implementationClass = "org.tamzi.kotermate.InstrumentedTestsConventionPlugin"
+            description = "Configures Instrumented tests"
+        }
+
+        register("Detekt") {
+            id = "org.tamzi.convention.detekt"
+            implementationClass = "org.tamzi.convention.DetektConventionPlugin"
+            description = "Configures Detekt for static code analysis"
         }
     }
 }
