@@ -13,3 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.tamzi.kotermate
+
+/**
+ * Constants used throughout the application
+ */
+
+const val DELAY_TIME_MS = 1000L

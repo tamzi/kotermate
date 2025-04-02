@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.tamzi.kotermate
+
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -24,10 +26,6 @@ import kotlinx.serialization.Serializable
 class Printer(
     val message: String
 ) {
-    companion object {
-        // Constants to replace magic numbers
-        private const val DELAY_TIME_MS = 1000L
-    }
     fun printMessage() =
         runBlocking {
             val now: Instant = Clock.System.now()

@@ -23,7 +23,6 @@ subprojects {
     // Additional project-specific configuration can go here
 }
 
-
 repositories {
     mavenCentral()
 }
@@ -32,7 +31,7 @@ dependencies {
     // For dependencies to work, we need the java plugin applied
     testImplementation(kotlin("test"))
     implementation(
-        "com.autonomousapps.build-health:com.autonomousapps.build-health.gradle.plugin:2.13.0"
+        "com.autonomousapps.build-health:com.autonomousapps.build-health.gradle.plugin:2.13.0",
     )
 
     // Add Detekt dependencies
@@ -52,7 +51,7 @@ tasks.withType<Test>().configureEach {
         events(
             TestLogEvent.FAILED,
             TestLogEvent.PASSED,
-            TestLogEvent.SKIPPED
+            TestLogEvent.SKIPPED,
         )
     }
 }
@@ -88,7 +87,7 @@ subprojects {
                 description = "Runs all code quality checks for this project"
                 dependsOn(
                     tasks.findByName("detekt") ?: emptyList<Task>(),
-                    tasks.findByName("spotlessCheck") ?: emptyList<Task>()
+                    tasks.findByName("spotlessCheck") ?: emptyList<Task>(),
                 )
             }
 
@@ -97,7 +96,7 @@ subprojects {
                 group = "verification"
                 description = "Fixes all auto-fixable code quality issues for this project"
                 dependsOn(
-                    tasks.findByName("spotlessApply") ?: emptyList<Task>()
+                    tasks.findByName("spotlessApply") ?: emptyList<Task>(),
                 )
                 // Explicitly exclude detekt as it only reports issues but doesn't fix them
                 tasks.findByName("detekt")?.let { mustRunAfter(it) }

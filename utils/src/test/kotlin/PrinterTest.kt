@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 import kotlinx.serialization.json.Json
+import org.tamzi.kotermate.Printer
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

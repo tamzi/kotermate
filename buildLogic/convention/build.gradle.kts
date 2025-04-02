@@ -52,31 +52,30 @@ gradlePlugin {
             implementationClass = "org.tamzi.convention.KotlinLibraryConventionPlugin"
             description = "Configures Kotlin libraries with standard settings and dependencies"
         }
-        
+
         register("kotlinApplication") {
             id = libs.plugins.kotermate.kotlin.application.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinApplicationConventionPlugin"
             description = "Configures Kotlin applications with runtime settings and distribution options"
         }
-        
+
         register("kotlinTest") {
             id = libs.plugins.kotermate.kotlin.test.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinTestConventionPlugin"
             description = "Sets up unit and integration testing with JaCoCo coverage reporting"
         }
-        
+
         register("kotlinSerialization") {
             id = libs.plugins.kotermate.kotlin.serialization.get().pluginId
             implementationClass = "org.tamzi.convention.KotlinSerializationConventionPlugin"
             description = "Configures Kotlin serialization for JSON and other formats"
         }
 
-
         register("Spotless") {
             id =
                 libs.plugins.kotermate.spotless
-                        .get()
-                        .pluginId
+                    .get()
+                    .pluginId
             implementationClass = "org.tamzi.convention.SpotlessConventionPlugin"
             description = "Configures Spotless for code formatting and style enforcement"
         }
