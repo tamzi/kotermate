@@ -6,6 +6,8 @@ Kotlin terminal template project
 * Run `./gradlew build` to only build the application.
 * Run `./gradlew check` to run all checks, including tests.
 * Run `./gradlew clean` to clean all build outputs.
+* Run `./gradlew clean build --refresh-dependencies` to  clean and build the application, refreshing dependencies.
+
 
 Note the usage of the Gradle Wrapper (`./gradlew`).
 This is the suggested way to use Gradle in production projects.
