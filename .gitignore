@@ -56,3 +56,4 @@ bin/
 .qodo
 /.idea/kotlinc.xml
 /build-cache/
+.idea/*
