@@ -1,26 +1,33 @@
-# kotermate
+# Parking Management System
 
-Kotlin terminal multimodule template project
+A terminal-based application for managing parking lots and vehicles.
 
-* Run `./gradlew run` to build and run the application.
-* Run `./gradlew build` to only build the application.
-* Run `./gradlew check` to run all checks, including tests.
+## Overview
+This project provides a text-based interface for parking management operations, including:
+- Vehicle entry and exit tracking
+- Parking space allocation and management
+- Payment processing and financial reporting
+- User and staff management
+- Reporting and analytics
+
+## Features
+The system is designed to run entirely in the terminal, making it lightweight, fast, and accessible on virtually any computer. For a complete list of features, see the [features document](doc/features.md).
+
+## Getting Started
+Run the application using:
+
+`./gradlew run`
+
+Follow the on-screen prompts to navigate the system.
+
+# Running Codequality Checks:
+Because of caching, i reommend you to run the following commands in a new terminal window.:
 * Run `./gradlew clean` to clean all build outputs.
+
+
 * Run `./gradlew codeQuality` to run all code quality checks.
 * Run `./gradlew fixCodeQuality` to fix all auto-fixable code quality issues.
-* Run `./gradlew :app:spotlessApply` to fix all auto-fixable code quality issues in app module.
-* Run `./gradlew :utils:spotlessApply` to fix all auto-fixable code quality issues in utils module.
-* Run `./gradlew :app:codeQuality` to  run code quality checks in app module.
 
-Note the usage of the Gradle Wrapper (`./gradlew`).
-This is the suggested way to use Gradle in production projects.
-
-[Learn more about the Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
-
-[Learn more about Gradle tasks](https://docs.gradle.org/current/userguide/command_line_interface.html#common_tasks).
-
-This project follows the suggested multi-module setup and consists of the `app` and `utils` subprojects.
-The shared build logic was extracted to a convention plugin located in `buildSrc`.
-
-This project uses a version catalog (see `gradle/versions.toml`) to declare and version dependencies
-and both a build cache and a configuration cache (see `gradle.properties`).
+#### Not needed but incase you want to quickly run a build
+* Run `./gradlew build` to only build the application.
+* Run `./gradlew clean build --refresh-dependencies`
