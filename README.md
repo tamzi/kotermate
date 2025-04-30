@@ -23,6 +23,8 @@ Follow the on-screen prompts to navigate the system.
 # Running Codequality Checks:
 Because of caching, i reommend you to run the following commands in a new terminal window.:
 * Run `./gradlew clean` to clean all build outputs.
+* Run `./gradlew clean build --refresh-dependencies` to  clean and build the application, refreshing dependencies.
+
 
 
 * Run `./gradlew codeQuality` to run all code quality checks.
