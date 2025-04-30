@@ -12,7 +12,7 @@ version = "0.0.2"
 
 application {
     // Define the main class for the application
-    mainClass.set("org.tamzi.AppKt")
+    mainClass.set("org.tamzi.kotermate.AppKt")
 }
 
 dependencies {
